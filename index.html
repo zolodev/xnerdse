@@ -47,13 +47,29 @@
     .uk-position-bottom small{
         color: #aaa;
     }
+    picture.responsive-image img {
+      width: 100vw;
+      height: 25vh;
+    }
+      @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 2s ease-in;
+  }
 </style>
 </head>
 <body>
-  <div class="uk-position-center">
-    <picture style="height:100px; width: 100%;">
-      <source srcset="xNerd-inverted.svg" type="image/svg+xml" alt="xNerd logo">
-      <source srcset="xNerd-inverted.webp" type="image/webp" alt="xNerd logo">
+  <div class="uk-position-center fade-in">
+    <picture class="responsive-image">
+      <source srcset="xNerd-inverted.svg" type="image/svg+xml">
+      <source srcset="xNerd-inverted.webp" type="image/webp">
       <img src="xNerd-inverted.jpg" alt="xNerd logo">
     </picture>
   </div>

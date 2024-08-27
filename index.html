@@ -27,19 +27,53 @@
     <link rel="icon" type="image/png" href="Favicon.png" sizes="196x196" />
     <meta name="msapplication-TileImage" content="Favicon.png" />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <style>
       html {
         background-color: #000;
+        overflow: hidden;
       }
 
+      .footer {
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        color: #aaa;
+        font-size: 1rem;
+      }
+      i.fas.fa-heart {
+        color: red;
+      }
+
+      .center-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
       .centered-image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 80vw;
         height: 25vh;
         object-fit: contain;
+      }
+
+      h1 {
+        text-align: center;
+        color: #b100b16e;
+        transform: translate(5vh, -6vh);
+        font-size: 4vh;
+        z-index: 1;
+        font-family: "Fira Code", "Source Code Pro", monospace;
       }
 
       @keyframes fadeIn {
@@ -51,25 +85,49 @@
         }
       }
 
-      .fade-in {
+      .fade-in-fast {
+        animation: fadeIn 1.2s ease-in;
+      }
+      .fade-in-slow {
         animation: fadeIn 2s ease-in;
+      }
+
+      .animated-word::before {
+        content: "design";
+        animation: changeWord 10s 1 forwards;
+      }
+
+      @keyframes changeWord {
+        0%,
+        33% {
+          content: "design";
+        }
+        34%,
+        66% {
+          content: "devel";
+        }
+        67%,
+        100% {
+          content: "😈";
+        }
       }
     </style>
   </head>
   <body>
-    <div class="">
+    <div class="center-container">
       <picture>
         <source srcset="xNerd-inverted.svg" type="image/svg+xml" />
         <source srcset="xNerd-inverted.webp" type="image/webp" />
         <img
-          class="centered-image fade-in"
+          class="centered-image fade-in-fast"
           src="xNerd-inverted.jpg"
           alt="xNerd logo"
         />
       </picture>
+      <h1>Sneaky shenanigans by <span class="animated-word"></span></h1>
     </div>
-    <div class="uk-position-bottom">
-      <small>&copy; 2024 &mdash; xNerd.</small>
+    <div class="footer">
+      <p>&copy; 2024 &mdash; <i class="color:red; fas fa-heart"></i> xNerd.</p>
     </div>
   </body>
 </html>

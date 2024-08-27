@@ -71,7 +71,7 @@
         text-align: center;
         color: #b100b16e;
         transform: translate(5vh, -6vh);
-        font-size: 4vh;
+        font-size: 3vh;
         z-index: 1;
         font-family: "Fira Code", "Source Code Pro", monospace;
       }
@@ -94,21 +94,33 @@
 
       .animated-word::before {
         content: "design";
-        animation: changeWord 10s 1 forwards;
+        animation: changeWord 16s 1 forwards;
+        opacity: 1;
       }
 
       @keyframes changeWord {
         0%,
-        33% {
+        30% {
           content: "design";
+          opacity: 1;
+        }
+        31%,
+        33% {
+          opacity: 0;
         }
         34%,
-        66% {
+        63% {
           content: "devel";
+          opacity: 1;
+        }
+        64%,
+        66% {
+          opacity: 0;
         }
         67%,
         100% {
           content: "😈";
+          opacity: 1;
         }
       }
     </style>

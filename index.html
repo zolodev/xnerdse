@@ -1,84 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+    <title>xNerd | Sneaky Shenanigans</title>
+    <meta content="xNerd" name="author" />
+    <meta content="Sneaky Shenanigans" name="description" />
+    <meta content="xNerd | Sneaky Shenanigans" property="og:title" />
+    <meta content="index,follow,noodp" name="robots" />
+    <meta content="website" property="og:type" />
+    <meta content="https://xnerd.se/" property="og:url" />
+    <meta content="xNerd" property="og:site_name" />
+    <meta content="Sneaky Shenanigans" property="og:description" />
+    <meta content="xNerd" property="article:author" />
 
-  <title>xNerd | Sneaky Shenanigans</title>
-  <meta content="xNerd" name="author">
-  <meta content="Sneaky Shenanigans" name="description">
-  <meta content="xNerd | Sneaky Shenanigans" property="og:title">
-  <meta content="index,follow,noodp" name="robots">
-  <meta content="website" property="og:type">
-  <meta content="https://xnerd.se/" property="og:url">
-  <meta content="xNerd" property="og:site_name">
-  <meta content="Sneaky Shenanigans" property="og:description">
-  <meta content="xNerd" property="article:author">
-  
-  <link rel="canonical" href="https://xnerd.se/">
-  <link rel="apple-touch-icon" sizes="180x180" href="Favicon.png">
-  <link rel="icon" type="image/png" href="Favicon.png" sizes="196x196">
-  <meta name="msapplication-TileImage" content="Favicon.png" />
+    <link rel="canonical" href="https://xnerd.se/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon.png" />
+    <link rel="icon" type="image/png" href="Favicon.png" sizes="196x196" />
+    <meta name="msapplication-TileImage" content="Favicon.png" />
 
-<style>
-    html {
+    <style>
+      html {
         background-color: #000;
-    }
-    .uk-position-center {
+      }
+
+      .centered-image {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
-        width: max-content;
-        max-width: 100%;
-        box-sizing: border-box;
-        padding: 1em;
-    }
-    .uk-position-bottom {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 1.25em auto;
-        width: 100%;
-        text-align: center;
-    }
-    .uk-position-bottom small{
-        color: #aaa;
-    }
-    img {
-      width: 100vw;
-      height: 25vh;
-    }
-      @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: 25vh;
+        object-fit: contain;
+      }
 
-  .fade-in {
-    animation: fadeIn 2s ease-in;
-  }
-</style>
-</head>
-<body>
-  <div class="uk-position-center fade-in">
-    <picture>
-      <source srcset="xNerd-inverted.svg" type="image/svg+xml">
-      <source srcset="xNerd-inverted.webp" type="image/webp">
-      <img class="responsive-image fade-in" src="xNerd-inverted.jpg" alt="xNerd logo" >
-    </picture>
-  </div>
-  <div class="uk-position-bottom">
-    <small>&copy; 2024 &mdash; xNerd.</small>
-  </div>
-</body>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 2s ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <picture>
+        <source srcset="xNerd-inverted.svg" type="image/svg+xml" />
+        <source srcset="xNerd-inverted.webp" type="image/webp" />
+        <img
+          class="centered-image fade-in"
+          src="xNerd-inverted.jpg"
+          alt="xNerd logo"
+        />
+      </picture>
+    </div>
+    <div class="uk-position-bottom">
+      <small>&copy; 2024 &mdash; xNerd.</small>
+    </div>
+  </body>
 </html>

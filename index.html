@@ -70,10 +70,14 @@
       h1 {
         text-align: center;
         color: #b100b16e;
-        transform: translate(5vh, -6vh);
+        transform: translate(-12vh, -2vh);
         font-size: 3vh;
         z-index: 1;
         font-family: "Fira Code", "Source Code Pro", monospace;
+      }
+
+      h1 span.shady {
+        opacity: 0.45;
       }
 
       @keyframes fadeIn {
@@ -110,7 +114,7 @@
         }
         34%,
         63% {
-          content: "devel";
+          content: "_devel";
           opacity: 1;
         }
         64%,
@@ -121,6 +125,15 @@
         100% {
           content: "😈";
           opacity: 1;
+        }
+      }
+
+      /* Responsive styling for mobile devices */
+      @media (max-width: 870px) {
+        h1 {
+          font-size: 2.1vh; /* Adjust font size for smaller screens */
+          /* transform: none; */
+          transform: translate(0vh, -9vh);
         }
       }
     </style>
@@ -136,7 +149,10 @@
           alt="xNerd logo"
         />
       </picture>
-      <h1>Sneaky shenanigans by <span class="animated-word"></span></h1>
+      <h1>
+        <span class="shady">Sneaky shenanigans by </span
+        ><span class="animated-word"></span>
+      </h1>
     </div>
     <div class="footer">
       <p>&copy; 2024 &mdash; <i class="color:red; fas fa-heart"></i> xNerd.</p>

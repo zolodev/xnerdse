@@ -69,14 +69,14 @@
 
       h1 {
         text-align: center;
-        color: #b100b16e;
+        color: #b100b1a7;
         transform: translate(-12vh, -2vh);
         font-size: 3vw;
         z-index: 1;
         font-family: "Fira Code", "Source Code Pro", monospace;
         padding: 2vh;
-        box-shadow: inset 0 0 20px #b100b16e, 0 0 20px #b100b16e;
-        border-radius: 25px;
+        /* box-shadow: inset 0 0 20px #b100b16e, 0 0 20px #b100b16e; */
+        /* border-radius: 25px; */
       }
 
       h1 span.shady {
@@ -106,11 +106,33 @@
         color: #b100b1;
       }
 
+      .pulse-heart {
+        color: #fd4e4e; /* Text color */
+        text-shadow: 0 0 2px rgba(255, 150, 150, 0.8),
+          0 0 10px rgba(255, 150, 150, 0.6), 0 0 3px rgba(255, 150, 150, 0.4);
+        /* font-size: 2em;  */
+        animation: pulseGlow 2s infinite; /* Animation for pulsing effect */
+      }
+
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          text-shadow: 0 0 2px rgba(255, 150, 150, 0.8),
+            0 0 10px rgba(255, 150, 150, 0.6), 0 0 3px rgba(255, 150, 150, 0.4);
+        }
+        50% {
+          text-shadow: 0 0 3px rgba(255, 150, 150, 1),
+            0 0 10px rgba(255, 150, 150, 0.8), 0 0 5px rgba(255, 150, 150, 0.6);
+        }
+      }
+
       @keyframes changeWord {
         0%,
         30% {
           content: "design";
           opacity: 1;
+          text-shadow: 0 0 1px rgba(255, 255, 255, 0.2),
+            0 0 8px rgba(255, 255, 255, 0.25);
         }
         31%,
         33% {
@@ -120,6 +142,8 @@
         63% {
           content: "_devel";
           opacity: 1;
+          text-shadow: 0 0 1px rgba(255, 255, 255, 0.2),
+            0 0 8px rgba(255, 255, 255, 0.25);
         }
         64%,
         66% {
@@ -135,8 +159,11 @@
       /* Responsive styling for mobile devices */
       @media (max-width: 870px) {
         h1 {
-          font-size: 3vw;
-          transform: translate(0vw, -8vw);
+          /* font-size: 3vw;
+          transform: translate(0vw, -8vw); */
+          font-size: 4vh;
+          transform: none;
+          box-shadow: none;
         }
       }
     </style>
@@ -158,7 +185,7 @@
       </h1>
     </div>
     <div class="footer">
-      <p>&copy; 2024 &mdash; <i class="color:red; fas fa-heart"></i> xNerd.</p>
+      <p>&copy; 2024 &mdash; <i class="pulse-heart fas fa-heart"></i> xNerd.</p>
     </div>
   </body>
 </html>
